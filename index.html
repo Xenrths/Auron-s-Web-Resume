@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            cursor: pointer;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .content {
+            display: none;
+            margin: 10px 0;
+            padding: 10px;
+            background: #eee;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Resume</h1>
+
+        <h2 onclick="toggle('professions')">Professions</h2>
+        <div id="professions" class="content">
+            <ul>
+                <li>Student</li>
+                <li>Freelancer</li>
+                <li>Video Editor</li>
+                <li>Graphic Designer</li>
+            </ul>
+        </div>
+
+        <h2 onclick="toggle('skills')">Skills</h2>
+        <div id="skills" class="content">
+            <ul>
+                <li>Java Programming</li>
+                <li>HTML & CSS</li>
+                <li>Problem Solving</li>
+                <li>Communication</li>
+            </ul>
+        </div>
+
+        <h2 onclick="toggle('education')">Education</h2>
+        <div id="education" class="content">
+            <ul>
+                <li>Senior High School (ICT / STEM / IT Track)</li>
+                <li>Junior High School Graduate</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggle(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
